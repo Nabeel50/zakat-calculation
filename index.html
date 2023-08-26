@@ -1,0 +1,67 @@
+
+<!-- <input type="number" id="silver">
+    <button onclick="silverzkaat()">click</button>
+<h1 id="showsilver"> show silver zakaat</h1>
+  <input type="number" id="inputnumber">
+  <button onclick="zakaatg()">click</button>
+  <h1 id="showresult">show result</h1>
+  
+  
+<script>
+  function total(ammountgold) {
+    return ammountgold*2.5/100
+  }
+
+  function zakaatg() {
+    let inputnum=document.getElementById('inputnumber').value;
+    document.getElementById('showresult').innerHTML=total(inputnum)
+  }
+   -->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zakat Calculator</title>
+    <script>
+        function calculateGoldZakat() {
+            var goldValue = parseFloat(document.getElementById("goldValue").value);
+            var zakatAmount = 0.025 * goldValue; // 2.5% of gold value
+            document.getElementById("goldResult").textContent = "Zakat amount for gold: " + zakatAmount.toFixed(2);
+        }
+
+        function calculateSilverZakat() {
+            var silverValue = parseFloat(document.getElementById("silverValue").value);
+            var zakatAmount = 0.025 * silverValue; // 2.5% of silver value
+            document.getElementById("silverResult").textContent = "Zakat amount for silver: " + zakatAmount.toFixed(2);
+        }
+
+        function calculateCashZakat() {
+            var cashAmount = parseFloat(document.getElementById("cashAmount").value);
+            var zakatAmount = 0.025 * cashAmount; // 2.5% of cash amount
+            document.getElementById("cashResult").textContent = "Zakat amount for cash: " + zakatAmount.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Zakat Calculator</h1>
+    
+    <label for="goldValue">Enter value of gold (in grams):</label>
+    <input type="number" id="goldValue"><br>
+    <button onclick="calculateGoldZakat()">Calculate Gold Zakat</button>
+    <p id="goldResult"></p>
+
+    <label for="silverValue">Enter value of silver (in grams):</label>
+    <input type="number" id="silverValue"><br>
+    <button onclick="calculateSilverZakat()">Calculate Silver Zakat</button>
+    <p id="silverResult"></p>
+
+    <label for="cashAmount">Enter amount of cash (in your local currency):</label>
+    <input type="number" id="cashAmount"><br>
+    <button onclick="calculateCashZakat()">Calculate Cash Zakat</button>
+    <p id="cashResult"></p>
+</body>
+</html>
